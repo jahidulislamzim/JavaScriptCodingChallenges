@@ -20,8 +20,40 @@ console.log(addition(10, 90)); // 100
 
 ```js
 function addition(a, b) {
- let add = a + b;
- return (add)
+    let add = a + b;
+    return (add)
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+
+##### 02. Converts hours into seconds.
+
+```js
+
+function howManySeconds(hours) {
+    //Write Your solution Here
+};
+
+
+console.log(howManySeconds(12)); // 43200
+console.log(howManySeconds(8)); // 28800
+console.log(howManySeconds(3)); // 10800
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function howManySeconds(hours) {
+    let hoursToSeconds = (hours*3600);
+    return(hoursToSeconds)
 };
 ```  
 
