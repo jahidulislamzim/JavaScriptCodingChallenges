@@ -169,3 +169,170 @@ function bitwiseXOR(n1, n2) {
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 06. Write Function to return first value of an array.
+
+```js
+function getFirstValue(arr) {
+      //Write Your solution Here
+};
+
+
+console.log(getFirstValue(["Saab", "Volvo", "BMW"])); // Saab
+console.log(getFirstValue([3, 5, 1])); // 3
+console.log(getFirstValue(['hello', 'world', 'welcome'])); // hello
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function getFirstValue(arr) {
+    return arr[0];
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 07. Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+```js
+function addition(num){
+      //Write Your solution Here
+};
+
+
+console.log(addition(5)); // 6
+console.log(addition(100)); // 101
+console.log(addition(99)); // 100
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function addition(num) {
+    let numPlusOne = num + 1;
+    return(numPlusOne)
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 08. Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+
+```js
+function lessThan100(a, b){
+      //Write Your solution Here
+};
+
+
+console.log(lessThan100(10, 20)); // true
+console.log(lessThan100(50, 60)); // false
+console.log(lessThan100(20, 50)); // true
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function lessThan100(a, b) {
+    if (a + b < 100) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 09. Create a function that returns true when num1 is equal to num2; otherwise return false.
+
+```js
+function isSameNum(num1, num2){
+      //Write Your solution Here
+};
+
+
+console.log(isSameNum(30, 30)); // true
+console.log(isSameNum(20, 40)); // false
+console.log(isSameNum(50, 50)); // true
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function isSameNum(num1, num2) {
+    if (num1 === num2){
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 10. Create a function that takes a number (step) as an argument and returns the amount of matchsticks in that step.
+
+<div align="center">
+<img src='./images/matchstick.png'  alt='JavaScript Coding Challenges jahidul islam zim' id='header'/>
+</div>
+
+```js
+function matchHouses(step){
+      //Write Your solution Here
+};
+
+
+console.log(matchHouses(5)); // 26
+console.log(matchHouses(0)); // 0
+console.log(matchHouses(10)); // 51
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function matchHouses(step){
+    if (step > 0) {
+        let matchSticks = ((step*6) - (step -1));
+    return(matchSticks)
+    }
+    else {
+        let matchSticks = 0;
+        return (matchSticks)
+    }
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
