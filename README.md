@@ -539,6 +539,10 @@ function canNest(arr1, arr2) {
 
 ##### 17. Create a function that calculates the number of different squares in an n * n square grid.
 
+<div align="center">
+<img src='./images/squer-grid.png'  alt='JavaScript Coding Challenges jahidul islam zim' id='header'/>
+</div>
+
 ```js
 function numberSquares(n){
       //Write Your solution Here
@@ -552,6 +556,9 @@ console.log(numberSquares(6)); // 91
 ```
 
 <details><summary style="cursor:pointer">Solution</summary>
+<div align="center">
+<img src='./images/squer-grid-formula.png'  alt='JavaScript Coding Challenges jahidul islam zim' id='header'/>
+</div>
 
 ```js
 function numberSquares(n){
