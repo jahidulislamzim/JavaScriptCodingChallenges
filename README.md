@@ -588,7 +588,6 @@ function whichIsLarger(f, g){
 };
 
 
-
 console.log(whichIsLarger(() => 25, () => 15)); // f
 console.log(whichIsLarger(() => 25, () => 25)); // neither
 console.log(whichIsLarger(() => 25,  () => 50)); // g
@@ -607,6 +606,71 @@ function whichIsLarger(f, g){
     }
     else if (f() === g()) {
         return ('neither')
+    }
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 19. Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
+
+```js
+function timeForMilkAndCookies(date){
+      //Write Your solution Here
+};
+
+
+console.log(timeForMilkAndCookies(new Date(3000, 11, 24))); //true
+console.log(timeForMilkAndCookies(new Date(2013, 0, 23))); //false
+console.log(timeForMilkAndCookies(new Date(3000, 11, 24))); //true
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function timeForMilkAndCookies(date){
+    return date.getMonth() === 11 && date.getDate() === 24;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 20. function that takes a two-digit number and determines if it's the largest of two possible digit swaps.
+
+```js
+function largestSwap(num){
+      //Write Your solution Here
+};
+
+
+console.log(largestSwap(14)); //false
+console.log(largestSwap(53)); //true
+console.log(largestSwap(-27)); //false
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function largestSwap(num){
+    let num1 = num + "";
+    let num2 = num1.split("").reverse().join("");
+    if (num1 >= num2) {
+        return true;
+    }
+    if (num1 < num2) {
+        return false;
     }
 };
 ```  
