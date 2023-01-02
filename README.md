@@ -502,7 +502,7 @@ function minMax(arr){
 ###### arr1's max is less than arr2's max.
 
 ```js
-function minMax(arr){
+function canNest(arr1, arr2){
       //Write Your solution Here
 };
 
@@ -527,6 +527,36 @@ function canNest(arr1, arr2) {
     else{
         return false
         }
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 17. Create a function that calculates the number of different squares in an n * n square grid.
+
+```js
+function numberSquares(n){
+      //Write Your solution Here
+};
+
+
+console.log(numberSquares(4)); // 30
+console.log(numberSquares(5)); // 55
+console.log(numberSquares(6)); // 91
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function numberSquares(n){
+    let num = n*(2*n + 1)*(n + 1)/6
+    return (num)
 };
 ```  
 
