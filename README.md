@@ -571,3 +571,47 @@ function numberSquares(n){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 18. Your function will be passed two functions, f and g, that don't take any parameters. Your function has to call them, and return a string which indicates which function returned the larger number.
+
+###### If f returns the larger number, return the string f.
+
+###### If g returns the larger number, return the string g.
+
+###### If the functions return the same number, return the string neither.
+
+```js
+function whichIsLarger(f, g){
+      //Write Your solution Here
+};
+
+
+
+console.log(whichIsLarger(() => 25, () => 15)); // f
+console.log(whichIsLarger(() => 25, () => 25)); // neither
+console.log(whichIsLarger(() => 25,  () => 50)); // g
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function whichIsLarger(f, g){
+    if (f() > g()) {
+        return ('f')
+    }
+    else if (g() > f()) {
+        return ('g')
+    }
+    else if (f() === g()) {
+        return ('neither')
+    }
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
