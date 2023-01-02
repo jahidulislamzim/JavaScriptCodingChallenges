@@ -416,8 +416,8 @@ console.log(addUp(15)); // 120
 <details><summary style="cursor:pointer">Solution</summary>
 
 ```js
-function addUp(num){
-    const sum = 0;
+function addUp(num) {
+    let sum = 0;
     for (i = 0; i <= num; i++){
         sum += i;
             }
@@ -486,6 +486,47 @@ console.log(minMax([2, -5, -1])); // [ -5, 2 ]
 function minMax(arr){
     arr.sort(function(a, b){return(a - b)})
     return [arr[0], arr[arr.length - 1]]
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 16. Create a function that returns true if the first array can be nested inside the second.
+###### arr1 can be nested inside arr2 if:
+###### arr1's min is greater than arr2's min.
+###### arr1's max is less than arr2's max.
+
+```js
+function minMax(arr){
+      //Write Your solution Here
+};
+
+
+console.log(canNest([3, 1], [4, 0])); // true
+console.log(canNest([9, 9, 8], [8, 9])); // false
+console.log(canNest([1, 2, 3, 4], [0, 6])); // true
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function canNest(arr1, arr2) {
+    arr1.sort(function(a,b){return(a - b)});
+    arr2.sort(function(a,b){return(a - b)});
+    let arr1MinMax = [arr1[0], arr1[arr1.length -1]];
+    let arr2MinMax = [arr2[0], arr2[arr2.length -1]];
+    if (arr1MinMax[0] > arr2MinMax[0] && arr1MinMax[1] < arr2MinMax[1]){
+        return true
+    }
+    else{
+        return false
+        }
 };
 ```  
 
