@@ -347,6 +347,7 @@ function squared(a){
 };
 
 
+
 console.log(squared(6)); // 36
 console.log(squared(9)); // 81
 console.log(squared(4)); // 16
@@ -358,6 +359,133 @@ console.log(squared(4)); // 16
 ```js
 function squared(a) {
     return (a*a);
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 12. Write function to calc area of a rectangle
+
+```js
+function findPerimeter(height, width){
+      //Write Your solution Here
+};
+
+
+console.log(findPerimeter(20, 50)); // 140
+console.log(findPerimeter(80, 30)); // 220
+console.log(findPerimeter(10, 40)); // 100
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function findPerimeter(height, width){
+    let perimeter = 2*(height + width);
+    return (perimeter)
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 13. Add up all the numbers from 1 to the number you passed to the function.
+
+```js
+function addUp(num){
+      //Write Your solution Here
+};
+
+
+console.log(addUp(10)); // 55
+console.log(addUp(40)); // 820
+console.log(addUp(15)); // 120
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function addUp(num){
+    const sum = 0;
+    for (i = 0; i <= num; i++){
+        sum += i;
+            }
+    return(sum)
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 14. Create a function that takes in three arguments (prob, prize, pay) and returns true if prob * prize > pay; otherwise return false.
+
+```js
+function profitableGamble(prob, prize, pay){
+      //Write Your solution Here
+};
+
+
+console.log(profitableGamble(2, 10, 20)); // false
+console.log(profitableGamble(5, 10, 40)); // true
+console.log(profitableGamble(6, 3, 30)); // false
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function profitableGamble(prob, prize, pay){
+    if (prob*prize > pay) {
+        return (true)
+    }
+    else {
+        return (false)
+    }
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 15. Takes an array of numbers, returns both the minimum and maximum numbers, in that order.
+
+```js
+function minMax(arr){
+      //Write Your solution Here
+};
+
+
+console.log(minMax([2, -1, 5])); // [ -1, 5 ]
+console.log(minMax([0, 5, 2])); // [ 0, 5 ]
+console.log(minMax([2, -5, -1])); // [ -5, 2 ]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function minMax(arr){
+    arr.sort(function(a, b){return(a - b)})
+    return [arr[0], arr[arr.length - 1]]
 };
 ```  
 
