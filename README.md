@@ -853,7 +853,7 @@ function filterArray(arr) {
 
 
 
-##### 24. function that takes an array of non-negative integers and strings and return a new array without the strings.
+##### 24. write a function that take string and write a regular expression that returns the value that matches every red flag and blue flag in a string.
 
 ```js
 function matchFlag(str){
