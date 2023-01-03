@@ -679,7 +679,7 @@ function largestSwap(num) {
     let c = num.toString();
     let a = [];
     let b = 0;
-    for (let i = 0; i <= c.length; i++) {
+    for (let i = 0; i < c.length; i++) {
       a.push(c[c.length - 1 - i]);
       b += a[i];
     }
@@ -716,7 +716,7 @@ console.log(charCount("b", "big fat bubble")); //4
 ```js
 function charCount(myChar, str){
     let a = 0;
-    for (let i = 0; i <= str.length; i++) {
+    for (let i = 0; i < str.length; i++) {
       if (myChar.toLowerCase() === str.toLowerCase()[i]) {
         a += 1;
       }
@@ -757,6 +757,48 @@ function repetition(txt, n){
     }
     return reptxt
 };
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 23. function that takes an array of non-negative integers and strings and return a new array without the strings.
+
+```js
+function filterArray(arr){
+      //Write Your solution Here
+};
+
+
+console.log(filterArray([1, 'z', 4, 5, 'i', 9, 'm'])); //[ 1, 4, 5, 9 ]
+console.log(filterArray([8, 'z', 1, '8', 'i', 9, 'm'])); //[ 8, 1, 9 ]
+console.log(filterArray([7, '1', 'z', 0, 'i', 9, 'm'])); //[ 7, 0, 9 ]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function filterArray(arr){
+    let filteredArray = arr.filter(item => typeof item === "number");
+    return filteredArray
+};
+
+
+
+function filterArray(arr) {
+    let filteredArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      if ( typeof arr[i] !== "string") {
+        filteredArr.push(arr[i])
+      } 
+    } return filteredArr
+};
+
 ```  
 
 </details>
