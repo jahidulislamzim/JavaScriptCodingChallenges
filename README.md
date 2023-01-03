@@ -673,6 +673,21 @@ function largestSwap(num){
         return false;
     }
 };
+
+
+function largestSwap(num) {
+    let c = num.toString();
+    let a = [];
+    let b = 0;
+    for (let i = 0; i < c.length; i++) {
+      a.push(c[c.length - 1 - i]);
+      b += a[i];
+    }
+    let d = parseInt(b);
+    if (d > num) {
+      return false;
+    } else return true;
+};
 ```  
 
 </details>
@@ -692,7 +707,7 @@ function charCount(myChar, str){
 
 console.log(charCount("a", "largest")); //1
 console.log(charCount("c", "Chamber of secrets")); // 2
-console.log(charCount("b", "big fat bubble")); 4
+console.log(charCount("b", "big fat bubble")); //4
 
 ```
 
@@ -707,6 +722,40 @@ function charCount(myChar, str){
       }
     }
     return a
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 22. function that takes two parameters and repeats the string n number of times.
+
+```js
+function repetition(txt, n){
+      //Write Your solution Here
+};
+
+
+console.log(repetition('zim', 5)); //zimzimzimzimzim
+console.log(repetition('zoy', 2)); //zoyzoy
+console.log(repetition('akib', 7)); //akibakibakibakibakibakibakib
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function repetition(txt, n){
+    let reptxt = ""
+    while (n > 0) {
+        reptxt += txt
+        n--;
+    }
+    return reptxt
 };
 ```  
 
