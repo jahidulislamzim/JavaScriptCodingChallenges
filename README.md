@@ -679,3 +679,38 @@ function largestSwap(num){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 21. function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
+
+```js
+function charCount(myChar, str){
+      //Write Your solution Here
+};
+
+
+console.log(charCount("a", "largest")); //1
+console.log(charCount("c", "Chamber of secrets")); // 2
+console.log(charCount("b", "big fat bubble")); 4
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function charCount(myChar, str){
+    let a = 0;
+    for (let i = 0; i <= str.length; i++) {
+      if (myChar.toLowerCase() === str.toLowerCase()[i]) {
+        a += 1;
+      }
+    }
+    return a
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
