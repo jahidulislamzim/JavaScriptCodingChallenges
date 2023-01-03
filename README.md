@@ -679,7 +679,7 @@ function largestSwap(num) {
     let c = num.toString();
     let a = [];
     let b = 0;
-    for (let i = 0; i < c.length; i++) {
+    for (let i = 0; i <= c.length; i++) {
       a.push(c[c.length - 1 - i]);
       b += a[i];
     }
