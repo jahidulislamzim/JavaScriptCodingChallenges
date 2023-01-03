@@ -853,7 +853,7 @@ function filterArray(arr) {
 
 
 
-##### 24. write a function that take string and write a regular expression that returns the value that matches every red flag and blue flag in a string.
+##### 24. Write a function that take a string and write a regular expression inner function that returns the value that matches every red flag and blue flag in this string.
 
 ```js
 function matchFlag(str){
