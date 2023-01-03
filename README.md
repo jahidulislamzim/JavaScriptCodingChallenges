@@ -850,3 +850,35 @@ function filterArray(arr) {
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 24. function that takes an array of non-negative integers and strings and return a new array without the strings.
+
+```js
+function matchFlag(str){
+      //Write Your solution Here
+};
+
+
+console.log(matchFlag("yellow flag red flag blue flag green flag")); //[ 'red flag', 'blue flag' ]
+console.log(matchFlag("yellow flag green flag orange flag white flag")); //null
+console.log(matchFlag("yellow flag blue flag green flag")); //[ 'blue flag' ]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+
+function matchFlag(str){
+    let REGEXP = /red flag|blue flag/g;
+    return str.match(REGEXP);
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
