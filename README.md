@@ -953,3 +953,44 @@ function flip(y){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+##### 27. Create a function that takes a string and returns a string in which each character is repeated once.
+
+```js
+function doubleChar(str){
+      //Write Your solution Here
+};
+
+
+console.log(doubleChar('jahidul')); //jjaahhiidduull
+console.log(doubleChar('islam')); //iissllaamm
+console.log(doubleChar('zim')); //zziimm
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+
+function doubleChar(str) {
+    let doubleString = '';
+    for(let i=0; i<str.length; i++){
+        doubleString += str[i] + str[i]
+    }
+    return doubleString
+};
+
+function doubleChar(str){
+    let array = str.split("");
+    let array2 = array.map( x => x.repeat(2));
+    let doubleString = array2.join("");
+    return doubleString
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
