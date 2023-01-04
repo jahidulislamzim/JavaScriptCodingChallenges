@@ -882,3 +882,35 @@ function matchFlag(str){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 25. Write a function that take a string and write a RegExp to find ellipsis: 3 (or more?) dots in a row in this string.
+
+```js
+function matchEllipsis(str){
+      //Write Your solution Here
+};
+
+
+console.log(matchEllipsis("Hello!... How goes?.....")); //[ '...', '.....' ]
+console.log(matchEllipsis("good morning!..... How goes?.")); // [ '.....' ]
+console.log(matchEllipsis("good night!.......... How goes?...")); // [ '..........', '...' ]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+
+function matchEllipsis(str){
+    let REGEXP = /\.{3,}/g;
+    return str.match(REGEXP);
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
