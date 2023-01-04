@@ -914,3 +914,42 @@ function matchEllipsis(str){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+##### 26. Write a function that returns 0 if the input is 1, and returns 1 if the input is 0. Try completing this challenge without using any:
+
+###### Conditionals
+
+###### Ternary operators
+
+###### Negations
+
+###### Bit operators
+
+
+```js
+function flip(y){
+      //Write Your solution Here
+};
+
+
+console.log(flip(1)); // 0
+console.log(flip(0)); // 1
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+
+function flip(y){
+    let x = y - 1;
+    return (Math.abs(x))
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
