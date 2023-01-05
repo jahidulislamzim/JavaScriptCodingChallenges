@@ -1092,3 +1092,32 @@ function getAbsSum(arr){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 30. Write a function that take a string and write a REGEXP that matches any characters except letters, digits and spaces.
+
+```js
+function matchAny(str){
+      //Write Your solution Here
+};
+
+
+console.log(matchAny('Csxdzontains_underscore ')); //[ '_' ]
+console.log(matchAny('Csxdzontains_underscore $ * P')); //[ '_', '$', '*' ]
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function matchAny(str){
+    const REGEXP = /[^a-z0-9 ]/gi;
+    return str.match(REGEXP)
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
