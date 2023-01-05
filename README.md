@@ -997,6 +997,7 @@ function doubleChar(str){
 **[⬆ Back to Top](#header)**
 
 
+
 ##### 28. Write a function that takes a positive integer and return its factorial.
 
 ```js
@@ -1050,6 +1051,39 @@ function factorial(num){
       fact *= i;
     }
     return fact;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 29. Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+
+```js
+function getAbsSum(arr){
+      //Write Your solution Here
+};
+
+
+console.log(getAbsSum([1, -4, 3, 8, 0])); // 16
+console.log(getAbsSum([1, 3, 0, -8, 0])); // 12
+console.log(getAbsSum([1, -4, -3, 8, 0])); //16
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function getAbsSum(arr){
+  let absSum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    absSum += Math.abs(arr[i]);
+  }
+  return absSum;
 };
 
 ```  
