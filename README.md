@@ -955,6 +955,7 @@ function flip(y){
 **[⬆ Back to Top](#header)**
 
 
+
 ##### 27. Create a function that takes a string and returns a string in which each character is repeated once.
 
 ```js
@@ -986,6 +987,69 @@ function doubleChar(str){
     let array2 = array.map( x => x.repeat(2));
     let doubleString = array2.join("");
     return doubleString
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+##### 28. Write a function that takes a positive integer and return its factorial.
+
+```js
+function factorial(num){
+      //Write Your solution Here
+};
+
+
+
+console.log(factorial(5)); //120
+console.log(factorial(10));  //3628800
+console.log(factorial(8)); //40320
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+
+function factorial(num) {
+    let fact = 1;
+    for (let i = 0; i<num ; i++){
+        fact *= (num-i);
+    }
+    return fact
+};
+
+function factorial(num){
+    if (num < 0)
+        return -1;
+    else if (num == 0)
+        return 1;
+    else {
+        return (num * factorial(num - 1));
+    }
+};
+
+function factorial(num){
+  let result = num;
+  if (num === 0 || num === 1) return 1;
+  while (num > 1) {
+    num--;
+    result *= num;
+  }
+  return result;
+};
+
+function factorial(num){
+    let fact = num;
+    if (num === 0 || num === 1) return 1;
+    for (let i = num - 1; i >= 1; i--) {
+      fact *= i;
+    }
+    return fact;
 };
 
 ```  
