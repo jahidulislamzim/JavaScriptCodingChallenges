@@ -1121,3 +1121,36 @@ function matchAny(str){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 31. Create a function that takes a string and returns the number (count) of vowels contained within it.
+
+```js
+function countVowels(str){
+      //Write Your solution Here
+};
+
+console.log(countVowels('Jahidul Islam zim')); // 5
+console.log(countVowels('returns the number of vowels')); // 8
+console.log(countVowels('JavaScript Coding Challenges')); // 8
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function countVowels(str){
+    let count = 0;
+    let vowlStr = str.match(/(a|e|i|o|u)/g);
+    for (let i = 0; i < vowlStr.length; i++) {
+        count += 1;
+    }
+    return count;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
