@@ -1131,7 +1131,7 @@ function countVowels(str){
       //Write Your solution Here
 };
 
-console.log(countVowels('Jahidul Islam zim')); // 5
+console.log(countVowels('Jahidul Islam zim')); // 6
 console.log(countVowels('returns the number of vowels')); // 8
 console.log(countVowels('JavaScript Coding Challenges')); // 8
 ```
@@ -1141,11 +1141,139 @@ console.log(countVowels('JavaScript Coding Challenges')); // 8
 ```js
 function countVowels(str){
     let count = 0;
-    let vowlStr = str.match(/(a|e|i|o|u)/g);
+    let vowlStr = str.toLowerCase().match(/(a|e|i|o|u)/g);
     for (let i = 0; i < vowlStr.length; i++) {
         count += 1;
     }
     return count;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 32. Create a function that takes two vectors as arrays and checks if the two vectors are orthogonal or not. The return value is boolean. Two vectors a and b are orthogonal if their dot product is equal to zero.
+
+```js
+function isOrthogonal(arr1, arr2){
+      //Write Your solution Here
+};
+
+
+console.log(isOrthogonal([1, -2, 4], [2, 5, 2])); //true
+console.log(isOrthogonal([1, -2, 5], [2, 5, 2])); //false
+console.log(isOrthogonal([1, 2, 4], [-2, 5, -2])); //true
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function isOrthogonal(arr1, arr2){
+    let ortho = 0;
+    for (i = 0; i < arr1.length; i++){
+        ortho += arr1[i]*arr2[i]
+    }
+    if (ortho === 0) {
+        return true
+    }
+    return false
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 33. Given an object of how many more pages each ink color can print, output the maximum number of pages the printer can print before any of the colors run out.
+
+```js
+function inkLevels(inks){
+      //Write Your solution Here
+};
+
+
+console.log(inkLevels({ cyan: 50, magenta: 12, yellow: 60 })); // 12
+console.log(inkLevels({ cyan: 50, magenta: 120, yellow: 60 })); // 50
+console.log(inkLevels({ cyan: 50, magenta: 12, yellow: 8 })); // 8
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function inkLevels(inks){
+  return Math.min(...Object.values(inks));
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 34. Create a function that takes a string and returns a new string with all vowels removed.
+
+```js
+function removeVowels(str){
+      //Write Your solution Here
+};
+
+console.log(removeVowels('Jahidul Islam Zim')); //Jhdl slm Zm
+console.log(removeVowels('a new string with all vowels')); // nw strng wth ll vwls
+console.log(removeVowels('Create a function')); //Crt  fnctn
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function removeVowels(str){
+    let newArr = str.match(/[^aeiouAEIOU]/g);
+    let newString = newArr.join('');
+    return newString
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 35. Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
+
+```js
+function findLargestNums(arr){
+      //Write Your solution Here
+};
+
+
+console.log(findLargestNums([[3,6], [10, 20], [-1, 7]])); //[ 6, 20, 7 ]
+console.log(findLargestNums([[8,6], [1, 0], [10, -7]])); //[ 8, 1, 10 ]
+console.log(findLargestNums([[3,34], [10, 22], [-1, -7]])); //[ 34, 22, -1 ]
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function findLargestNums(arr){
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(Math.max(...arr[i]));
+    }
+    return newArr
 };
 
 ```  
