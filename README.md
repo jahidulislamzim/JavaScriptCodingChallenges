@@ -1282,3 +1282,57 @@ function findLargestNums(arr){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 36. Given an array of scrabble tiles, create a function that outputs the maximum possible score a player can achieve by summing up the total number of points for all the tiles in their hand. Each hand contains 7 scrabble tiles.
+
+```js
+function maximumScore(tileHand){
+      //Write Your solution Here
+};
+
+
+console.log(
+  maximumScore([
+    { tile: "N", score: 1 },
+    { tile: "K", score: 5 },
+    { tile: "Z", score: 10 },
+  ])
+); //16
+
+console.log(
+  maximumScore([
+    { tile: "N", score: 9 },
+    { tile: "K", score: 5 },
+    { tile: "Z", score: 40 },
+  ])
+); //54
+
+console.log(
+  maximumScore([
+    { tile: "N", score: 1 },
+    { tile: "K", score: 65 },
+    { tile: "Z", score: 10 },
+  ])
+); //76
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function maximumScore(tileHand){
+  let score = 0;
+  for ( let i = 0; i < tileHand.length; i++) {
+    score += tileHand[i].score;
+  }
+  return score;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
