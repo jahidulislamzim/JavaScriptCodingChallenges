@@ -1336,3 +1336,34 @@ function maximumScore(tileHand){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+##### 37. Assume a program only reads .js or .jsx files. Write a function that accepts a file path and returns true if it can read the file and false if it can't.
+
+```js
+function isJS(path){
+      //Write Your solution Here
+};
+
+console.log(isJS('file.jsx')); //true 
+console.log(isJS('file.jsg')); //false
+console.log(isJS('file.js')); //true
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function isJS(path){
+    let extension = path.match( /[^.]+$/g)[0]
+    if(extension === 'js' || extension==='jsx'){
+        return true;
+    }
+    return false;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
