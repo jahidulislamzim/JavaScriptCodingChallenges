@@ -1400,3 +1400,67 @@ function animals(chickens, cows, goats){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+##### 39.Create a function that returns the number of frames shown in a given number of minutes for a certain FPS.
+###### FPS = Frames Per Second
+
+
+```js
+function frames(minutes, fps){
+      //Write Your solution Here
+};
+
+console.log(frames(1, 1)); //60
+console.log(frames(10, 1)); //600
+console.log(frames(10, 25)); //15000
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function frames(minutes, fps){
+    return minutes*60*fps;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+##### 40.Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
+
+
+```js
+function makesTen(a, b){
+      //Write Your solution Here
+};
+
+console.log(frames(1, 1)); //60
+console.log(frames(10, 1)); //600
+console.log(frames(10, 25)); //15000
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function makesTen(a, b){
+  if (a == 10 || b == 10) {
+    return true;
+  } else if (a + b == 10) {
+    return true;
+  } else {
+    return false;
+  };
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
