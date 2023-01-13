@@ -1464,3 +1464,161 @@ function makesTen(a, b){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+##### 41.Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+
+
+```js
+function comp(str1, str2){
+      //Write Your solution Here
+};
+
+console.log(comp("AB", "CD")); //true
+console.log(comp("ABC", "DE")); //false
+console.log(comp("WE", "RT")); // true
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function comp(str1, str2) {
+  if (str1.length === str2.length) {
+    return true;
+  }
+  return false;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+##### 42.A vehicle needs 10 times the amount of fuel than the distance it travels. However, it must always carry a minimum of 100 fuel before setting off. Create a function which calculates the amount of fuel it needs, given the distance.
+
+
+
+```js
+function calculateFuel(n){
+      //Write Your solution Here
+};
+
+console.log(calculateFuel(15)); //150 
+console.log(calculateFuel(23.5)); //235
+console.log(calculateFuel(3)); //100
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function calculateFuel(n){
+  let fuel = n * 10;
+  if (fuel >= 100) {
+    return fuel;
+  };
+  return 100;
+};
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+##### 43.Given an n-sided regular polygon n, return the total sum of internal angles (in degrees). n will always be greater than 2.
+
+###### The formula (n - 2) x 180 gives the sum of all the measures of the angles of an n-sided polygon.
+
+
+```js
+function sumPolygon(n){
+      //Write Your solution Here
+};
+
+
+console.log(sumPolygon(3)); //180
+console.log(sumPolygon(4)); //360
+console.log(sumPolygon(6)); // 720
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function sumPolygon(n){
+  return (n - 2) * 180;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+##### 44.Create a function that returns true if an integer is evenly divisible by 5, and false otherwise.
+
+
+```js
+function divisibleByFive(n){
+      //Write Your solution Here
+};
+
+
+console.log(divisibleByFive(5)); //true
+console.log(divisibleByFive(-55)); //false
+console.log(divisibleByFive(37)); //true
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function divisibleByFive(n){
+  if (n % 5 === 0) {
+    return true;
+  };
+  return false;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 45. Create a function that takes in an array of numbers and returns the sum of its cubes.
+
+
+```js
+function sumOfCubes(nums){
+      //Write Your solution Here
+};
+
+
+console.log(sumOfCubes([1, 2, 3, 4, 5])); //255
+console.log(sumOfCubes([5, 2, 7, 4, 0])); //540
+console.log(sumOfCubes([1, 6, 3, 9, 5])); //1098
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function sumOfCubes(nums){
+  var cubeSum = 0;
+  for (i in nums) {
+    cubeSum += nums[i] * nums[i] * nums[i];
+  };
+  return cubeSum;;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
