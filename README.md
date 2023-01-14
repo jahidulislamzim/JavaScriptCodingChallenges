@@ -1622,3 +1622,141 @@ function sumOfCubes(nums){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 46.A group of friends have decided to start a secret society. The name will be the first letter of each of their names, sorted in alphabetical order. Create a function that takes in an array of names and returns the name of the secret society.
+
+
+```js
+function societyName(friends){
+      //Write Your solution Here
+};
+
+
+console.log(societyName(['zim', 'zoy', 'shithil', 'akib'])); //zzsa
+console.log(societyName(['Rakib', 'Taskin', 'shomrat', 'Prionty'])); //RTsP
+console.log(societyName(['Ratul', 'Rakib', 'Ritu', 'Taj'])); //RRRT
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function societyName(friends){
+  let nameArr = friends.map((x) => x.split(""));
+  let letterArr = "";
+  for (let i = 0; i < nameArr.length; i++) {
+    letterArr += nameArr[i][0];
+  };
+  return letterArr;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 47. Create two functions: isPrefix(word, prefix-) and isSuffix(word, -suffix).
+
+###### isPrefix should return true if it begins with the prefix argument.
+###### isSuffix should return true if it ends with the suffix argument.
+###### Otherwise return false.
+
+
+```js
+function isPrefix(word, prefix) {
+      //Write Your solution Here
+};
+
+function isSuffix(word, suffix){
+      //Write Your solution Here
+};
+
+
+console.log(isPrefix("automation", "auto-")); //true
+console.log(isPrefix("retrospect", "sub-")); //false
+
+console.log(isSuffix("arachnophobia", "-phobia")); //true
+console.log(isSuffix("vocation", "-logy")); //false
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+
+function isPrefix(word, prefix) {
+    return word.startsWith(prefix.slice(0, -1));
+}
+
+function isSuffix(word, suffix) {
+    return word.endsWith(suffix.slice(1));
+}
+
+function isPrefix(word, prefix) {
+    let prefixWord = prefix.slice(0, -1);
+    let mainWord = '';
+    for(let i = 0; i < prefixWord.length; i++){
+        mainWord += word[i]; 
+    }
+    if(prefixWord === mainWord){
+        return true;
+    }
+    return false;
+}
+
+function isSuffix(word, suffix) {
+    let suffixWord = suffix.slice(1);
+    let mainWord = '';
+    let newString = '';
+    for(let i = word.length - 1; i > suffixWord.length; i--){
+        mainWord += word[i];
+    }
+    for (let i = mainWord.length - 1; i >= 0; i--) { 
+        newString += mainWord[i];
+    } 
+    if(suffixWord === newString){
+        return true;
+    }
+    return false;
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 48. Create a function that returns the number of hashes and pluses in a string.
+
+
+```js
+function hashPlusCount(str){
+      //Write Your solution Here
+};
+
+
+console.log(hashPlusCount("###+")); //[ 3, 1 ]
+console.log(hashPlusCount("##+++#")); //[ 3, 3 ]
+console.log(hashPlusCount("")); //[ 0, 0 ]
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function hashPlusCount(str){
+  let hash = (str.match(/#/g) || []).length;
+  let plus = (str.match(/\+/g) || []).length;
+  return [hash, plus];
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
