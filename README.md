@@ -1814,9 +1814,9 @@ console.log(matchEven("4902")); //2
 <details><summary style="cursor:pointer">Solution</summary>
 
 ```js
-function matchEven(str){
+function matchEven(num){
   let REGEXP = /[24680]$/;
-  return str.match(REGEXP)?.[0];
+  return num.match(REGEXP)?.[0];
 };
 ```  
 
