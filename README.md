@@ -1760,3 +1760,67 @@ function hashPlusCount(str){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 49. Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
+
+
+```js
+function formatPhoneNumber(numbers){
+      //Write Your solution Here
+};
+
+
+console.log(formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); //(123) 456-7890
+console.log(formatPhoneNumber([1, 2, 0, 4, 5, 3, 8, 1, 9, 0])); //(120) 453-8190
+console.log(formatPhoneNumber([1, 7, 9, 4, 2, 6, 8, 8, 5, 0])); //(179) 426-8850
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function formatPhoneNumber(numbers) {
+  numbers.splice(0, 0, "(");
+  numbers.splice(4, 0, ")");
+  numbers.splice(5, 0, " ");
+  numbers.splice(9, 0, "-");
+  let str = numbers.join("");
+  return str;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 50. Write a regular expression that matches only an even number. Numbers will be presented as strings.
+
+
+```js
+function matchEven(str){
+      //Write Your solution Here
+};
+
+
+console.log(matchEven("3458")); //8
+console.log(matchEven("3517")); //Undefined
+console.log(matchEven("4902")); //2
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function matchEven(str){
+  let REGEXP = /[24680]$/;
+  return str.match(REGEXP)?.[0];
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
