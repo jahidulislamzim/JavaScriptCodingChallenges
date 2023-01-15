@@ -1824,3 +1824,33 @@ function matchEven(num){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 51. Create a function that returns the index of the first vowel in a string.
+
+
+```js
+function firstVowel(str){
+      //Write Your solution Here
+};
+
+
+console.log(firstVowel("zimislam")); //1
+console.log(firstVowel("akib")); //0
+console.log(firstVowel("shomrat")); //2
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function firstVowel(str){
+  let regex = /[aeiou]/gi;
+  return str.search(regex);
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
