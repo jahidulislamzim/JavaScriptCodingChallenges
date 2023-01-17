@@ -1854,3 +1854,85 @@ function firstVowel(str){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 52. Create a function that removes all duplicate items from an array.
+
+
+```js
+function removesDuplicateItems(arr){
+      //Write Your solution Here
+};
+
+
+console.log(removesDuplicateItems(["A", "B", "A", "C", "D", "C"])); //[ 'A', 'B', 'C', 'D' ]
+console.log(removesDuplicateItems([1, 4, 2, 3, 2, 4, 3, 5])); //[ 1, 4, 2, 3, 5 ]
+console.log(removesDuplicateItems(["zim", "zoy", "zim", "akib", "shithil", "akib"]));//[ 'zim', 'zoy', 'akib', 'shithil' ]
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function removesDuplicateItems(arr) {
+  const setArr = [...new Set(arr)];
+  return setArr;
+};
+
+function removesDuplicateItems(arr) {
+  let unique = arr.filter((element, index) => {
+    return arr.indexOf(element) === index;
+  });
+  return unique;
+};
+
+function removesDuplicateItems(arr) {
+  let unique = [];
+  arr.forEach((c) => {
+    if (!unique.includes(c)) {
+      unique.push(c);
+    }});
+  return unique;
+};
+
+function removesDuplicateItems(arr){
+  let outputArray = [];
+  let count = 0;
+  let start = false;
+
+  for (j = 0; j < arr.length; j++) {
+    for (k = 0; k < outputArray.length; k++) {
+      if (arr[j] == outputArray[k]) {
+        start = true;
+      }
+    }
+    count++;
+    if (count == 1 && start == false) {
+      outputArray.push(arr[j]);
+    }
+    start = false;
+    count = 0;
+  }
+  return outputArray;
+};
+
+function removesDuplicateItems(arr){
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        for (let k = j; k < arr.length; k++) {
+          arr[k] = arr[k + 1];
+        }
+        arr.length--;
+        j--;
+      }
+    }
+  }
+  return arr;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
