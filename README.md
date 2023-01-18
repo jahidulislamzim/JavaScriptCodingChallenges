@@ -414,7 +414,7 @@ function squared(a) {
 
 
 
-##### 12. Write function to Perimeter of Rectangles
+##### 12. Write function to calculate Perimeter of Rectangles
 
 ```js
 function findPerimeter(height, width){
