@@ -1936,3 +1936,50 @@ function removesDuplicateItems(arr){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 53. Create a function that takes an array of numbers and returns a new array, sorted in ascending order (smallest to biggest).
+
+
+```js
+function sortNumsAscending(arr){
+      //Write Your solution Here
+};
+
+
+console.log(sortNumsAscending([2, 4, 6, 1, 9, 3, 5, 8, 7, 0])); //[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(sortNumsAscending([22, 40, 56, 11, 90])); //[ 11, 22, 40, 56, 90 ]
+console.log(sortNumsAscending([26, 45, 64, 19, 59, 31])); //[ 19, 26, 31, 45, 59, 64 ]
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+
+function sortNumsAscending(arr){
+  if ((arr === []) | (arr === null)) {
+    return [];
+  }
+  return arr.sort(function (a, b){
+    return a - b;
+  });
+};
+
+function sortNumsAscending(arr) {
+  for (let i = 1; i < arr.length; i++)
+    for (let j = 0; j < i; j++)
+      if (arr[i] < arr[j]) {
+        var x = arr[i];
+        arr[i] = arr[j];
+        arr[j] = x;
+      }
+  return arr;
+}
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
