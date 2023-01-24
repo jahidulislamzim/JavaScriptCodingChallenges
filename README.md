@@ -2020,3 +2020,39 @@ function amplify(num) {
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 55. Given an array of 10 numbers, return the maximum possible total made by summing just 5 of the 10 numbers.
+
+
+
+```js
+function maxTotal(nums){
+      //Write Your solution Here
+};
+
+
+
+console.log(maxTotal([1, 1, 0, 1, 3, 10, 10, 10, 10, 1])); //43
+console.log(maxTotal([0, 0, 0, 0, 10, 0, 3, 0, 100])); // 113
+console.log(maxTotal([1, 2, 3, 2, 5, 6, 9, 8, 9, 10])); //42
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function maxTotal(nums){
+  let nums1 = nums.sort(function (a, b){return a-b})
+  let max = 0
+  for (i=5; i<nums1.length; i++){
+    max += nums1[i];
+  }
+  return max;
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
