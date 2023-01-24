@@ -2056,3 +2056,38 @@ function maxTotal(nums){
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 56. Write a regular expression that matches a string if and only if it is a valid zip code.
+
+###### Must only contain numbers (no non-digits allowed).
+###### Must not contain any spaces.
+###### Must not be greater than 5 digits in length.
+
+
+
+```js
+function isValidZip(zip){
+      //Write Your solution Here
+};
+
+
+console.log(isValidZip("393939")); //false
+console.log(isValidZip("59001")); //true
+console.log(isValidZip("853a7")); //false
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function isValidZip(zip) {
+  const REXEX = /^\d{5}$/;
+    return REXEX.test(zip);
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
