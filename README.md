@@ -1983,3 +1983,40 @@ function sortNumsAscending(arr) {
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 54. Given a higher bound num, implement a function that returns an array with the sequence of numbers, after that every multiple of 4 has been amplified by 10.
+
+
+```js
+function amplify(num) {
+      //Write Your solution Here
+};
+
+
+console.log(amplify(12)); //[1,   2,  3, 40,  5, 6, 7, 80,  9, 10, 11, 120]
+console.log(amplify(8)); //[1, 2, 3, 40, 5, 6, 7, 80 ]
+console.log(amplify(15)); //[1,  2,  3, 40,  5, 6, 7, 80,  9, 10, 11, 120,13, 14, 15]
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+function amplify(num) {
+  let arr = [];
+  for ( let i = 1; i <= num; i++) {
+    if (i % 4 === 0) {
+      arr.push(i * 10);
+    } else {
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
