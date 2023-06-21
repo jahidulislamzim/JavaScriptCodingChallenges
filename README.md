@@ -2091,3 +2091,33 @@ function isValidZip(zip) {
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 57. Create a function that takes a number as an argument and returns the highest digit in that number.
+
+
+```js
+function highestDigit(number){
+      //Write Your solution Here
+};
+
+
+console.log(highestDigit(3456)); //6
+console.log(highestDigit(21098)); //9
+console.log(highestDigit(56123)); //6
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const highestDigit = (number) => {
+	let arr = (number.toString().split(''))
+	return Math.max(...arr)
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
