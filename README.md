@@ -1440,9 +1440,9 @@ function makesTen(a, b){
       //Write Your solution Here
 };
 
-console.log(frames(1, 1)); //60
-console.log(frames(10, 1)); //600
-console.log(frames(10, 25)); //15000
+console.log(makesTen(1, 1)); //60
+console.log(makesTen(10, 1)); //600
+console.log(makesTen(10, 25)); //15000
 ```
 
 <details><summary style="cursor:pointer">Solution</summary>
@@ -2095,6 +2095,36 @@ function isValidZip(zip) {
 
 
 ##### 57. Create a function that takes a number as an argument and returns the highest digit in that number.
+
+
+```js
+function highestDigit(number){
+      //Write Your solution Here
+};
+
+
+console.log(highestDigit(3456)); //6
+console.log(highestDigit(21098)); //9
+console.log(highestDigit(56123)); //6
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const highestDigit = (number) => {
+	let arr = (number.toString().split(''))
+	return Math.max(...arr)
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+
+##### 58. Create a function that takes a number as an argument and returns the highest digit in that number.
 
 
 ```js
