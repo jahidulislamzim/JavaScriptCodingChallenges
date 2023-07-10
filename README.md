@@ -2203,3 +2203,37 @@ const maximumScore = (titleHand) => {
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 60.Create a function that takes an array as an argument and returns true or false depending on whether the average of all elements in the array is a whole number or not.
+
+
+```js
+const isAvgWhole = (arr) =>{
+      //Write Your solution Here
+};
+
+console.log(isAvgWhole([1, 3])); // true
+console.log(isAvgWhole([1, 2, 3, 4])); // false
+console.log(isAvgWhole([1, 5, 6]));// true
+console.log(isAvgWhole([1, 1, 1]));// true
+console.log(isAvgWhole([9, 2, 2, 5]));// false
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const isAvgWhole = (arr) =>{
+	let sum = 0;
+	for (i in arr){sum += arr[i]}
+	if (sum%(arr.length)===0){return true}
+	return false
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
