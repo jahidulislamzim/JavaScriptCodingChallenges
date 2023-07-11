@@ -69,7 +69,6 @@ function addition(a, b) {
     return (add)
 };
 ```  
-
 </details>
 
 ---
