@@ -2237,3 +2237,52 @@ const isAvgWhole = (arr) =>{
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 61.Create a function that takes an array of strings and return an array, sorted from shortest to longest.
+
+
+```js
+const sortByLength = (arr) =>{
+      //Write Your solution Here
+};
+
+console.log(sortByLength(["a", "ccc", "dddd", "bb"])) //["a", "bb", "ccc", "dddd"]
+
+console.log(sortByLength(["apple", "pie", "shortcake"])) //["pie", "apple", "shortcake"]
+
+console.log(sortByLength(["may", "april", "september", "august"])) //["may", "april", "august", "september"]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const sortByLength = (arr) => {
+	return arr.sort(function (a,b){return a.length - b.length}) 
+}
+
+
+const sortByLength = (arr) => {
+  const n = arr.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (arr[j].length > arr[j + 1].length) {
+
+        const temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+
+  return arr;
+};
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
