@@ -2285,3 +2285,39 @@ const sortByLength = (arr) => {
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+
+##### 62. A value is omnipresent if it exists in every subarray inside the main array. Create a function that determines whether an input value is omnipresent for a given array.Create a function that takes an array of strings and return an array, sorted from shortest to longest.
+
+
+```js
+const isOmnipresent = (arr, val) =>{
+      //Write Your solution Here
+};
+
+console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 1)); // true
+
+console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6)); // false
+
+console.log(isOmnipresent([[5], [5], [5], [6, 5]], 5)); // true
+ 
+console.log(isOmnipresent([[5], [5], [5], [6, 5]], 6)); //false
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const isOmnipresent = (arr, val) => {
+	for (i in arr){
+		for (i in arr[i]){
+			return arr[i].includes(val)
+		}
+	}
+}
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
